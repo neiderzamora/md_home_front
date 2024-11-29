@@ -19,13 +19,13 @@ const SignInForm = () => {
   ];
 
   return (
-    <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+    <div className="mx-auto w-full max-w-sm">
       <form action="#" method="POST" className="space-y-6">
         {formFields.map(({ id, name, type, label, autoComplete }) => (
           <div key={id}>
             <label
               htmlFor={id}
-              className="block text-sm/6 font-medium text-gray-900"
+              className="block text-lg font-medium text-gray-900"
             >
               {label}
             </label>
@@ -36,7 +36,7 @@ const SignInForm = () => {
                 type={type}
                 required
                 autoComplete={autoComplete}
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
+                className="block border p-2 mt-2 w-full"
               />
             </div>
           </div>
@@ -53,7 +53,7 @@ const SignInForm = () => {
         <div>
           <button
             type="submit"
-            className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            className="flex w-full justify-center rounded-md bg-primary-100 px-3 py-1.5 text-lg font-semibold text-white shadow-sm hover:bg-primary-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-100"
           >
             Iniciar Sesión
           </button>
@@ -61,7 +61,7 @@ const SignInForm = () => {
         <div>
           <Link
             href="/register"
-            className="flex w-full justify-center rounded-md bg-gray-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
+            className="flex w-full justify-center rounded-md bg-secondary-100 px-3 py-1.5 text-lg font-semibold text-white shadow-sm hover:bg-secondary-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-100"
           >
             Registrarse
           </Link>

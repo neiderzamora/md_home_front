@@ -18,6 +18,14 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: {
+          '100': '#042159',
+          '200': '#08348C',
+        },
+        secondary: {
+          '100': '#0D5FA6',
+          '200': '#117DBF',
+        }
       },
     },
   },
