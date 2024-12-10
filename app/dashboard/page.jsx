@@ -1,4 +1,4 @@
-import DoctorDashboard from '@/components/Dashboard/DoctorDashboard'
+import DoctorDashboard from '@/components/dashboard/DoctorDashboard'
 import Navbar from '@/components/navbar/navbar'
 import React from 'react'
 
