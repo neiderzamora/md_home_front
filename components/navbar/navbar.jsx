@@ -1,26 +1,11 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import {
-  FaUser,
-  FaUserCircle,
-  FaInfoCircle,
-  FaEnvelope,
-  FaCog,
-  FaSignOutAlt,
-} from "react-icons/fa";
-import { MdMedicalServices } from "react-icons/md";
-import Link from "next/link";
+import { PatienceDropdownMenu, PatienceNavlinks, PatienceMobileMenu, DoctorMobileMenu, DoctorDropdownMenu, DoctorNavlinks } from "./List";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
-const NavLink = ({ href, icon, children }) => (
-  <Link
-    href={href}
-    className="flex items-center text-gray-600 hover:text-primary-100 font-medium"
-  >
-    {icon && <span className="mr-2">{icon}</span>}
-    {children}
-  </Link>
-);
+import { FaUser } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -38,20 +23,15 @@ export default function Navbar() {
     <header className="bg-white shadow-md fixed w-full top-0 z-50 mb-4">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <a
+        <Link
           href="/"
           className="text-2xl font-semibold text-primary-100 hover:text-primary-200"
         >
           <span className="text-secondary-100">MD</span>Home
-        </a>
+        </Link>
 
         {/* Navigation Links */}
-        <nav className="hidden md:flex space-x-6">
-          <NavLink href="/services">Servicios</NavLink>
-          <NavLink href="/doctors">Doctores</NavLink>
-          <NavLink href="/about">Acerca de</NavLink>
-          <NavLink href="/contact">Contacto</NavLink>
-        </nav>
+        <DoctorNavlinks />
 
         {/* CTA Button */}
         <div className="relative">
@@ -68,17 +48,7 @@ export default function Navbar() {
           {/* Dropdown Menu */}
           {isDropdownOpen && (
             <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md z-50">
-              <div className="py-2 px-4 space-y-1 flex-col">
-                <NavLink href="/profile" icon={<FaUserCircle />}>
-                  Mi Perfil
-                </NavLink>
-                <NavLink href="/settings" icon={<FaCog />}>
-                  Configuraciones
-                </NavLink>
-                <NavLink href="/logout" icon={<FaSignOutAlt />}>
-                  Cerrar Sesión
-                </NavLink>
-              </div>
+              <DoctorDropdownMenu />
             </div>
           )}
         </div>
@@ -90,49 +60,14 @@ export default function Navbar() {
           onClick={toggleMobileMenu}
           aria-expanded={isMobileMenuOpen}
         >
-          <svg
-            className="h-6 w-6"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
+          <HiOutlineMenuAlt3 className="h-6 w-6" />
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white shadow-md">
-          <nav className="flex flex-col space-y-4 p-4">
-            <NavLink href="/" icon={<MdMedicalServices />}>
-              Solicitar Servicio
-            </NavLink>
-            <NavLink href="/profile" icon={<FaUserCircle />}>
-              Mi Perfil
-            </NavLink>
-            <NavLink href="/settings" icon={<FaCog />}>
-              Configuraciones
-            </NavLink>
-            <NavLink href="/about" icon={<FaInfoCircle />}>
-              Acerca de
-            </NavLink>
-            <NavLink href="/contact" icon={<FaEnvelope />}>
-              Contacto
-            </NavLink>
-            <Link
-              href="/sign-in"
-              className="flex items-center mt-16 bg-primary-200 text-gray-100 hover:text-primary-100 font-medium px-2 py-1 rounded-md"
-            >
-              <FaUser className="mr-2" /> Iniciar Sesión
-            </Link>
-          </nav>
+          <DoctorMobileMenu />
         </div>
       )}
     </header>
