@@ -110,7 +110,10 @@ const ServiceEndForm = () => {
                     name="cie10Description"
                     isTextArea={true} // Indica que este campo es un textarea
                 />
-                <button type="submit" className="bg-primary-100 text-white py-2 px-4 rounded">
+                <button 
+                    type="submit" 
+                    className="bg-primary-100 text-white py-2 px-4 rounded w-full sm:w-auto"
+                >
                     Enviar
                 </button>
             </form>

@@ -54,7 +54,10 @@ const FailedService = () => {
                         ))}
                     </ul>
                 </div>
-                <button type="submit" className="bg-primary-100 text-white py-2 px-4 rounded">
+                <button 
+                    type="submit" 
+                    className="bg-primary-100 text-white py-2 px-4 rounded w-full sm:w-auto"
+                >
                     Enviar
                 </button>
             </form>
