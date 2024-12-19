@@ -32,7 +32,7 @@ export const PatienceNavlinks = () => (
 
 export const DoctorNavlinks = () => (
     <nav className="hidden md:flex space-x-6">
-      <NavLink href="/services">Historial</NavLink>
+      <NavLink href="/dashboard/history-service">Historial</NavLink>
       <NavLink href="/about">Acerca de</NavLink>
       <NavLink href="/contact">Centro ayuda</NavLink>
     </nav>
@@ -67,10 +67,10 @@ export const PatienceMobileMenu = () => (
 export const DoctorMobileMenu = () => (
     <nav className="flex flex-col space-y-4 p-4">
         <hr className="-mt-4"/>
-      <NavLink href="/" icon={<LuHistory />}>
+      <NavLink href="/dashboard/history-service" icon={<LuHistory />}>
         Historial
       </NavLink>
-      <NavLink href="/profile" icon={<PiCarSimpleFill  />}>
+      <NavLink href="/dashboard/vehicle" icon={<PiCarSimpleFill  />}>
         Vehiculos
       </NavLink>
       <NavLink href="/profile" icon={<FaUserCircle />}>
@@ -114,7 +114,7 @@ export const DoctorDropdownMenu = () => (
       <NavLink href="/profile" icon={<FaUserCircle />}>
         Mi Perfil
       </NavLink>
-      <NavLink href="/profile" icon={<PiCarSimpleFill />}>
+      <NavLink href="/dashboard/vehicle" icon={<PiCarSimpleFill />}>
         Vehiculos
       </NavLink>
       <NavLink href="/settings" icon={<FaCog />}>

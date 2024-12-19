@@ -65,7 +65,7 @@ const ServiceHistory = () => {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {filteredServices.map((service) => (
           <Link
-            href="/service-history-detail"
+            href="./history-service/detail"
             key={service.id}
             className="border p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
             onClick={() => handleServiceClick(service.id)}

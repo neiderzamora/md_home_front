@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { InputField } from "./inputField";
-import { SelectField } from "./selectField";
-import Logo from "../sign-in/logo";
+import { InputField } from "./InputField";
+import { SelectField } from "./SelectField";
+import Logo from "../sign-in/Logo";
 import Link from "next/link";
 import { toast } from "nextjs-toast-notify";
 import "nextjs-toast-notify/dist/nextjs-toast-notify.css";

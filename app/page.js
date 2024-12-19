@@ -1,5 +1,5 @@
-import Navbar from '@/components/navbar/navbar'
-import HomeDoctorService from '@/components/service-doctor/serviceDoc'
+import Navbar from '@/components/navbar/Navbar'
+import HomeDoctorService from '@/components/request-service/RequestService'
 import React from 'react'
 
 export default function page() {

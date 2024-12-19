@@ -2,7 +2,7 @@
 
 import React from "react";
 import EditVehicle from "@/components/vehicle/EditVehicle"; // Asegúrate de que la ruta sea correcta
-import Navbar from "@/components/navbar/navbar";
+import Navbar from "@/components/navbar/Navbar";
 
 const VehicleEditPage = async ({ params }) => {
   const { id } = await params; // Asegúrate de usar await aquí

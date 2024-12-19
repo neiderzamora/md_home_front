@@ -1,4 +1,4 @@
-import UserDetails from "@/components/user-details/userDetails"; // Asegúrate de importar el componente
+import UserDetails from "@/components/user-details/UserDetails";
 
 const CmpUserDetails = () => {
   // Suponiendo que tienes los datos del usuario en algún lugar

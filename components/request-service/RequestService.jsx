@@ -4,7 +4,7 @@ import { toast } from 'nextjs-toast-notify';
 import "nextjs-toast-notify/dist/nextjs-toast-notify.css";
 import React, { useState, useEffect } from 'react';
 
-const HomeDoctorService = () => {
+const RequestService = () => {
     const [address, setAddress] = useState({ neighborhood: '', line: '', description: '' });
     const [symptoms, setSymptoms] = useState([]);
     const [symptomInput, setSymptomInput] = useState('');
@@ -150,4 +150,4 @@ const PaymentMethodSection = ({ paymentMethod, setPaymentMethod }) => {
     );
 };
 
-export default HomeDoctorService;
+export default RequestService;

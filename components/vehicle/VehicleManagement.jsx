@@ -20,11 +20,11 @@ const VehicleManagement = () => {
   }, []);
 
   const handleCreateVehicle = () => {
-    router.push("/vehicle/add"); // Redirige a la página de creación de vehículos
+    router.push("./vehicle/add"); // Redirige a la página de creación de vehículos
   };
 
   const handleEditVehicle = (vehicleId) => {
-    router.push(`/vehicle/${vehicleId}`); // Redirige a la página de edición del vehículo
+    router.push(`./vehicle/${vehicleId}`); // Redirige a la página de edición del vehículo
   };
 
   const handleDeleteVehicle = (id) => {

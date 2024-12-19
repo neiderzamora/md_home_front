@@ -1,5 +1,5 @@
-import Logo from "@/components/sign-in/logo";
-import SignInForm from "@/components/sign-in/signInForm";
+import Logo from "@/components/sign-in/Logo";
+import SignInForm from "@/components/sign-in/SignInForm";
 
 export default function Home() {
     return (
