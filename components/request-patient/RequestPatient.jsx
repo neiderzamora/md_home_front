@@ -1,7 +1,7 @@
 "use client"
 
 // components/request-patient.jsx
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { FaCheck, FaExclamationTriangle, FaFlagCheckered } from 'react-icons/fa';
 import { MapContainer, TileLayer, Marker, Popup, Polyline } from 'react-leaflet';
@@ -21,7 +21,7 @@ const RequestPatient = ({ params }) => {
   const { id } = params;
   const [status, setStatus] = useState(null);
   const [doctorPosition, setDoctorPosition] = useState([4.142, -73.626]); // Posición inicial del doctor en Villavicencio, Meta, Colombia
-  const arrivalPosition = [4.153, -73.634]; // Posición del Condominio Amarilo en Villavicencio, Meta, Colombia
+  const arrivalPosition = useMemo(() => [4.153, -73.634], []); // Posición del Condominio Amarilo en Villavicencio, Meta, Colombia
   const [route, setRoute] = useState([]);
   const router = useRouter();
 

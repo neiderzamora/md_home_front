@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const UserDetails = ({ user }) => {
     const {
@@ -18,10 +19,12 @@ const UserDetails = ({ user }) => {
     const renderProfilePhoto = () => {
         if (profile_photo) {
             return (
-                <img
+                <Image
                     src={URL.createObjectURL(profile_photo)}
                     alt="Foto de Perfil"
                     className="mt-2 w-24 h-24 rounded-full border-4 border-primary-100 shadow-lg"
+                    width={96}
+                    height={96}
                 />
             );
         }

@@ -1,25 +1,34 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import EditVehicle from "@/components/vehicle/EditVehicle"; // Asegúrate de que la ruta sea correcta
 import Navbar from "@/components/navbar/Navbar";
 
-const VehicleEditPage = async ({ params }) => {
-  const { id } = await params; // Asegúrate de usar await aquí
+const VehicleEditPage = ({ params }) => {
+  const { id } = params;
 
-  // Aquí deberías cargar los datos del vehículo según el ID
-  // Por ejemplo, podrías hacer una llamada a la API para obtener los datos del vehículo
-  const vehicle = {
-    id: id,
-    plateNumber: "ABC123", // Simulación de datos
-    color: "Rojo",
-    brand: "Toyota",
-  };
+  const [vehicle, setVehicle] = useState(null);
+
+  useEffect(() => {
+    // Aquí deberías cargar los datos del vehículo según el ID
+    // Por ejemplo, podrías hacer una llamada a la API para obtener los datos del vehículo
+    const fetchedVehicle = {
+      id: id,
+      plateNumber: "ABC123", // Simulación de datos
+      color: "Rojo",
+      brand: "Toyota",
+    };
+    setVehicle(fetchedVehicle);
+  }, [id]);
 
   const handleEditVehicle = (updatedVehicle) => {
     // Lógica para guardar el vehículo editado
     console.log(updatedVehicle);
   };
+
+  if (!vehicle) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div>
